@@ -1,0 +1,33 @@
+# Copyright Reflexian.com
+
+default-channel: global # Default channel for all users
+whisper-chat-enabled: true # Enable /msg or not
+
+db:
+  host: localhost
+  port: 3306
+  username: root
+  password: root
+  database: chat
+
+channels:
+  # Premade channel "global"
+  global:
+    name: "global" # Channel name, used to switch channels using /chat <channel>
+    permission: "chat.global" # Permission required to use this channel
+    global: true # Global channel, seen by all players
+    worlds: [] # List of worlds this channel is available in
+    area: 0 # Distance from player to see messages, 0 for that world
+  worldchat:
+    name: "world"
+    permission: "chat.world"
+    global: false
+    worlds: ['world']
+    area: 0
+  areachat:
+    name: "area"
+    permission: "chat.area"
+    global: false
+    worlds: []
+    area: 50 # 50 blocks
+

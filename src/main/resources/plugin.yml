@@ -1,0 +1,8 @@
+name: ChatPlus
+version: '${project.version}'
+main: com.reflexian.chatplus.ChatPlus
+authors: [ Reflexian ]
+description: Made by Reflexian.com
+website: https://reflexian.com
+softdepend:
+  - PlaceHolderAPI
